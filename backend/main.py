@@ -1,9 +1,18 @@
 import os
+import ssl
 import glob
 import uuid
 import asyncio
+import certifi
 from pathlib import Path
 from typing import Optional
+
+# ── SSL Fix for Railway/Nix environment ─────────────────────────────────────
+os.environ['SSL_CERT_FILE'] = certifi.where()
+os.environ['REQUESTS_CA_BUNDLE'] = certifi.where()
+ssl.create_default_context = lambda *a, **kw: ssl.create_default_context(
+    *a, cafile=certifi.where(), **kw
+)
 
 import urllib.parse
 from fastapi import FastAPI, Request, HTTPException, BackgroundTasks, File, UploadFile, Form

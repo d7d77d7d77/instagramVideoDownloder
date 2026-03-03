@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["python311", "cacert"]
+nixPkgs = ["python311"]
 
 [phases.install]
 cmds = [
@@ -8,11 +8,5 @@ cmds = [
   "/opt/venv/bin/pip install -r requirements.txt"
 ]
 
-[phases.build]
-cmds = [
-  "echo 'export SSL_CERT_FILE=/etc/ssl/certs/ca-bundle.crt' >> /root/.profile",
-  "echo 'export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-bundle.crt' >> /root/.profile"
-]
-
 [start]
-cmd = "SSL_CERT_FILE=/etc/ssl/certs/ca-bundle.crt REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-bundle.crt /opt/venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+cmd = "/opt/venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
