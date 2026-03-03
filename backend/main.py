@@ -10,9 +10,13 @@ from typing import Optional
 # ── SSL Fix for Railway/Nix environment ─────────────────────────────────────
 os.environ['SSL_CERT_FILE'] = certifi.where()
 os.environ['REQUESTS_CA_BUNDLE'] = certifi.where()
-ssl.create_default_context = lambda *a, **kw: ssl.create_default_context(
-    *a, cafile=certifi.where(), **kw
-)
+os.environ['PYTHONHTTPSVERIFY'] = '0'
+# Patch ssl to use certifi CA bundle (avoid recursive lambda)
+_orig_ssl_ctx = ssl.create_default_context
+def _patched_ssl_ctx(*args, **kwargs):
+    kwargs.setdefault('cafile', certifi.where())
+    return _orig_ssl_ctx(*args, **kwargs)
+ssl.create_default_context = _patched_ssl_ctx
 
 import urllib.parse
 from fastapi import FastAPI, Request, HTTPException, BackgroundTasks, File, UploadFile, Form
@@ -84,6 +88,7 @@ def download_video_sync(url: str, proxy: Optional[str] = None) -> dict:
         'sleep_interval': 1,
         'max_sleep_interval': 3,
         'nocheckcertificate': True,
+        'verify': False,
     }
 
     # Use the saved cookies.txt file for Instagram auth
