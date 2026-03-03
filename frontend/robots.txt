@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://instasnap.app/sitemap.xml
+
+# Disallow API and temp directories
+Disallow: /api/
+Disallow: /temp_downloads/

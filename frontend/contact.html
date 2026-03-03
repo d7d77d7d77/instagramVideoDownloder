@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact InstaSnap - Instagram Video Downloader Support</title>
+    <meta name="description"
+        content="Get in touch with InstaSnap support. Have a question about our free Instagram Reel and video downloader? We're here to help.">
+    <meta name="keywords" content="contact instasnap, instagram downloader support, help instasnap">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://instasnap.app/contact.html">
+    <meta property="og:title" content="Contact InstaSnap - Instagram Video Downloader Support">
+    <meta property="og:description"
+        content="Get in touch with InstaSnap support. We're here to help with your questions.">
+    <meta property="og:url" content="https://instasnap.app/contact.html">
+    <meta property="og:type" content="website">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact InstaSnap","url":"https://instasnap.app/contact.html","description":"Contact InstaSnap support for Instagram video downloader queries."}</script>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo"><span class="logo-icon">✨</span><span class="nav-brand">InstaSnap</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li role="none"><a href="/" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="/faq.html" class="nav-link" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="/about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="/contact.html" class="nav-link active" role="menuitem">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+        <div class="container content-page">
+            <header class="page-header">
+                <h1>Contact Us</h1>
+                <p class="page-subtitle">We typically respond within 24–48 hours</p>
+            </header>
+
+            <main id="main-content">
+                <section class="glass-card content-card">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contact-form" action="#" method="post" novalidate
+                        aria-label="Contact form">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="contact-name" name="name" placeholder="Your full name" required
+                                autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="contact-email" name="email" placeholder="your@email.com" required
+                                autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject <span class="required">*</span></label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="" disabled selected>Select a topic...</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="copyright">Copyright / DMCA</option>
+                                <option value="general">General Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message <span class="required">*</span></label>
+                            <textarea id="contact-message" name="message" rows="6"
+                                placeholder="Describe your issue or question in detail..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn" id="form-submit-btn">Send Message</button>
+                        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                </section>
+
+                <section class="glass-card content-card">
+                    <h2>Other Ways to Reach Us</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h3>Email</h3>
+                                <p>support@instasnap.app</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <h3>Response Time</h3>
+                                <p>We typically respond within 24–48 business hours.</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🚀</span>
+                            <div>
+                                <h3>Quick Answers</h3>
+                                <p>Check our <a href="/faq.html" class="inline-link">FAQ page</a> for instant answers to
+                                    common questions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-logo"><span>✨</span> InstaSnap</div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+                <a href="/faq.html">FAQ</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms
+                    of Service</a>
+            </nav>
+            <p class="footer-copy">&copy; 2024 InstaSnap. All rights reserved.</p>
+            <p class="footer-disclaimer">InstaSnap is not affiliated with Instagram or Meta Platforms, Inc.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            const btn = document.getElementById('form-submit-btn');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            setTimeout(() => {
+                status.textContent = '✅ Message sent! We\'ll get back to you within 24–48 hours.';
+                status.className = 'form-status success';
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+                document.getElementById('contact-form').reset();
+            }, 1200);
+        });
+    </script>
+    <script src="nav.js"></script>
+</body>
+
+</html>

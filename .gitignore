@@ -1,0 +1,31 @@
+# Virtual environment (don't upload - huge folder)
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Downloaded videos (temp files - auto-generated)
+backend/temp_downloads/
+
+# User cookies (private/sensitive)
+backend/cookies.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaSnap - Free Instagram Video & Reel Downloader | HD Quality</title>
+    <meta name="description"
+        content="Download Instagram Reels, Videos, and Stories in HD quality for free. InstaSnap is the fastest, block-proof Instagram video downloader. No watermark, no login required.">
+    <meta name="keywords"
+        content="instagram video downloader, download instagram reels, instagram reel downloader, save instagram videos, insta downloader, instagram stories downloader, download instagram videos online, instagram downloader without watermark, free instagram video downloader, instagram reels download, insta video downloader, save reels, saveinsta, instasave, download instagram mp4">
+    <meta name="author" content="InstaSnap">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="canonical" href="https://instasnap.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://instasnap.app/">
+    <meta property="og:title" content="InstaSnap - Free Instagram Video & Reel Downloader">
+    <meta property="og:description"
+        content="Download Instagram Reels, Videos & Stories in HD instantly. No watermark, completely free.">
+    <meta property="og:image" content="https://instasnap.app/og-image.png">
+    <meta property="og:site_name" content="InstaSnap">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InstaSnap - Free Instagram Video & Reel Downloader">
+    <meta name="twitter:description" content="Download Instagram Reels, Videos & Stories in HD instantly.">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://instasnap.app/#website","url":"https://instasnap.app/","name":"InstaSnap","description":"Free Instagram Video & Reel Downloader"},{"@type":"SoftwareApplication","name":"InstaSnap Instagram Video Downloader","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","url":"https://instasnap.app/","description":"Download Instagram Reels, Videos and Stories in HD quality for free without watermark.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"12547"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I download Instagram Reels?","acceptedAnswer":{"@type":"Answer","text":"Copy the Instagram Reel URL, paste it in the input box on InstaSnap, and click Download Now. Your video will be ready in seconds."}},{"@type":"Question","name":"Is InstaSnap free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, InstaSnap is completely free to use. No subscription or account is required."}},{"@type":"Question","name":"What video quality does InstaSnap download?","acceptedAnswer":{"@type":"Answer","text":"InstaSnap downloads the highest quality available, including Full HD (1080p)."}}]}]}
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR ═══════════════════════════════════════════════════ -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo" aria-label="InstaSnap Home">
+                <div class="nav-logo-icon">⚡</div>
+                <span class="nav-brand">InstaSnap</span>
+            </a>
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+    <main id="main-content">
+        <section class="hero" aria-label="Instagram Video Downloader">
+            <div class="hero-glow"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Free &amp; Block-Proof Instagram Downloader
+                </div>
+                <h1 class="hero-title">
+                    Download Instagram<br>
+                    <span class="gradient-text">Reels &amp; Videos</span><br>
+                    in Seconds
+                </h1>
+                <p class="hero-subtitle">Paste any Instagram link to save HD quality videos directly to your device. No
+                    watermark. No signup.</p>
+
+                <!-- Status banner -->
+                <div id="cookie-banner" class="cookie-banner hidden" role="alert" aria-live="polite">
+                    <span id="cookie-status-text"></span>
+                </div>
+
+                <!-- Download card -->
+                <div class="download-card">
+                    <div class="input-row">
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path
+                                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                            </svg>
+                            <input type="url" id="video-url" placeholder="Paste Instagram Reel or Video URL..."
+                                autocomplete="off" aria-label="Instagram video URL">
+                        </div>
+                        <button id="download-btn" class="download-btn" aria-label="Download video">
+                            <span class="btn-text">Download</span>
+                            <div class="btn-loader" id="btn-loader" aria-hidden="true"></div>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+
+                    <!-- Pill features -->
+                    <div class="pill-row">
+                        <span class="pill">🛡️ Block-Proof</span>
+                        <span class="pill">⚡ Fast Download</span>
+                        <span class="pill">💎 HD Quality</span>
+                        <span class="pill">🆓 100% Free</span>
+                    </div>
+                </div>
+
+                <!-- Result card -->
+                <div id="result-container" class="result-card hidden" aria-live="polite">
+                    <div class="result-icon">✅</div>
+                    <div class="result-info">
+                        <p class="result-label">Your video is ready!</p>
+                        <p id="video-title" class="result-filename">instagram_video.mp4</p>
+                    </div>
+                    <a id="save-link" class="save-btn" download>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                        </svg>
+                        Save File
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ TRUST STATS ══════════════════════════════════════════ -->
+        <section class="stats-section" aria-label="Trust statistics">
+            <div class="stat-item">
+                <span class="stat-num">2M+</span>
+                <span class="stat-label">Videos Downloaded</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">4.9★</span>
+                <span class="stat-label">User Rating</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">1080p</span>
+                <span class="stat-label">Max Quality</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Free Forever</span>
+            </div>
+        </section>
+
+        <!-- ═══ HOW IT WORKS ════════════════════════════════════════ -->
+        <section class="how-section" aria-labelledby="how-title">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 id="how-title">How to Download Instagram Videos</h2>
+                    <p>Three simple steps to save any Instagram Reel or Video</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <div class="step-num">01</div>
+                        <div class="step-icon">🔗</div>
+                        <h3>Copy the URL</h3>
+                        <p>Open Instagram, find your Reel or video, tap Share → Copy Link to get the URL.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-num">02</div>
+                        <div class="step-icon">📋</div>
+                        <h3>Paste &amp; Download</h3>
+                        <p>Paste the link into InstaSnap's input box and hit Download. We'll fetch the HD file
+                            instantly.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-num">03</div>
+                        <div class="step-icon">💾</div>
+                        <h3>Save to Device</h3>
+                        <p>Click "Save File" to download the MP4 directly to your device in Full HD quality.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FEATURES ════════════════════════════════════════════ -->
+        <section class="features-section" aria-labelledby="features-title">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 id="features-title">Why Choose InstaSnap?</h2>
+                    <p>The best free Instagram video downloader with no catch</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap gradient-purple">🛡️</div>
+                        <h3>Block-Proof Technology</h3>
+                        <p>Advanced User-Agent rotation, rate pacing, and cookie-based auth ensure reliable downloads
+                            every time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap gradient-pink">💎</div>
+                        <h3>Full HD Quality</h3>
+                        <p>Download videos at the highest available quality — up to 1080p Full HD, exactly as uploaded.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap gradient-blue">🚀</div>
+                        <h3>Blazing Fast</h3>
+                        <p>Server-side extraction means your download starts in seconds, not minutes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap gradient-green">🔒</div>
+                        <h3>Private &amp; Secure</h3>
+                        <p>Your cookies stay on your machine. Downloaded files are auto-deleted after 10 minutes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap gradient-orange">🌍</div>
+                        <h3>Works Everywhere</h3>
+                        <p>Windows, Mac, Linux — any modern browser on any OS. No app install needed.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap gradient-red">🆓</div>
+                        <h3>Always Free</h3>
+                        <p>No subscription, no hidden charges, no watermarks. Completely free forever.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ COOKIE SETUP ════════════════════════════════════════ -->
+        <section class="cookie-section-wrapper" aria-labelledby="cookie-title">
+            <div class="section-inner">
+                <div class="cookie-setup-card">
+                    <div class="cookie-setup-text">
+                        <h2 id="cookie-title">🍪 Setup Login Cookies</h2>
+                        <p>Instagram requires your session cookies to serve videos. Export them from your browser in one
+                            click — stored locally on your machine, never sent to our servers.</p>
+                        <ol class="cookie-steps-list">
+                            <li>Install <strong>"Get cookies.txt LOCALLY"</strong> in Chrome or Edge</li>
+                            <li>Log in to Instagram in that browser</li>
+                            <li>Click the extension → Export cookies for <code>instagram.com</code></li>
+                            <li>Upload the file below</li>
+                        </ol>
+                        <a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc"
+                            target="_blank" rel="noopener noreferrer" class="ext-link">Get the Extension →</a>
+                    </div>
+                    <div class="cookie-setup-upload">
+                        <input type="file" id="cookie-file" accept=".txt" class="file-input"
+                            aria-label="Upload cookies.txt">
+                        <label for="cookie-file" class="upload-drop-zone" id="upload-zone">
+                            <span class="upload-drop-icon">📂</span>
+                            <span id="upload-label-text">Click to upload <strong>cookies.txt</strong></span>
+                            <span class="upload-drop-hint">Netscape format, exported from Chrome or Edge</span>
+                        </label>
+                        <button id="upload-btn" class="upload-submit hidden">Upload Cookies File</button>
+                        <div id="cookie-msg" class="cookie-msg" role="status" aria-live="polite"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FAQ ══════════════════════════════════════════════════ -->
+        <section class="faq-section" aria-labelledby="faq-title">
+            <div class="section-inner faq-inner">
+                <div class="section-header">
+                    <h2 id="faq-title">Frequently Asked Questions</h2>
+                    <p>Quick answers about downloading Instagram Reels and Videos</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How do I download an Instagram Reel?</summary>
+                        <p>Copy the Reel URL, paste it in the input box above, and click Download. Your MP4 will be
+                            ready in seconds.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Why do I need to upload cookies?</summary>
+                        <p>Instagram now requires authentication to serve video data. Your cookies act as your login
+                            session — stored locally, never shared.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What video quality will I get?</summary>
+                        <p>InstaSnap fetches the highest quality available — typically HD 1080p, exactly as Instagram
+                            serves it.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is InstaSnap completely free?</summary>
+                        <p>Yes — always. No subscription, no watermarks, no login required on our end.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Are my downloaded files stored?</summary>
+                        <p>Files are auto-deleted from our server after 10 minutes. We never archive your downloads.</p>
+                    </details>
+                </div>
+                <a href="/faq.html" class="see-all-btn">View All FAQs →</a>
+            </div>
+        </section>
+
+        <!-- ═══ SEO CONTENT ══════════════════════════════════════════ -->
+        <section class="seo-section" aria-label="About InstaSnap">
+            <div class="section-inner">
+                <h2>The Best Free Instagram Video Downloader</h2>
+                <p>InstaSnap is a powerful <strong>Instagram video downloader</strong> that lets you <strong>save
+                        Instagram Reels</strong> and videos in Full HD quality — completely free and no watermark.
+                    Whether you're a content creator archiving your own posts, or saving inspiring videos for offline
+                    access, InstaSnap makes it effortless.</p>
+                <p>Unlike other tools, InstaSnap uses <strong>block-proof technology</strong> — including smart request
+                    pacing, browser-grade headers, and cookie authentication — to ensure reliable downloads even as
+                    Instagram updates its platform.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo-icon">⚡</span>
+                    <span class="footer-brand-name">InstaSnap</span>
+                    <p>The fastest free Instagram Video &amp; Reel Downloader.</p>
+                </div>
+                <nav class="footer-links-grid" aria-label="Footer navigation">
+                    <div class="footer-col">
+                        <h4>Tool</h4>
+                        <a href="/">Reel Downloader</a>
+                        <a href="/">Video Downloader</a>
+                        <a href="/faq.html">How it Works</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="/about.html">About Us</a>
+                        <a href="/contact.html">Contact</a>
+                        <a href="/faq.html">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/privacy-policy.html">Privacy Policy</a>
+                        <a href="/terms.html">Terms of Service</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 InstaSnap. All rights reserved. For personal use only.</p>
+                <p>Not affiliated with Instagram or Meta Platforms, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="nav.js"></script>
+</body>
+
+</html>
