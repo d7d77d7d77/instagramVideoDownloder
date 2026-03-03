@@ -141,12 +141,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (!filename.toLowerCase().endsWith('.mp4')) filename += '.mp4';
 
-            setStatus('✅ Video ready! Click "Save File" to download.', 'success');
+            // ── Auto-trigger download via dynamic anchor (most reliable) ───────
+            const tempLink = document.createElement('a');
+            tempLink.href = downloadUrl;
+            tempLink.download = filename;
+            tempLink.style.display = 'none';
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+            // Revoke blob URL after delay to free memory
+            setTimeout(() => URL.revokeObjectURL(downloadUrl), 10000);
+
+            setStatus('✅ Your video is downloading as: ' + filename, 'success');
             if (videoTitle) videoTitle.textContent = filename;
+            // Keep save-link as backup
             if (saveLink) {
                 saveLink.href = downloadUrl;
-                saveLink.download = filename;
+                saveLink.setAttribute('download', filename);
             }
+
             if (resultCard) {
                 resultCard.classList.remove('hidden');
                 setTimeout(() => resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
