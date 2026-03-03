@@ -134,10 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Parse filename from Content-Disposition
             const cd = response.headers.get('Content-Disposition') || '';
             let filename = 'instagram_video.mp4';
-            const fmatch = cd.match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/);
+            const fmatch = cd.match(/filename\*?=(?:UTF-8'')?["']?([^"';\n]+)["']?/i);
             if (fmatch && fmatch[1]) {
-                filename = fmatch[1].replace(/['"]/g, '').trim();
+                try { filename = decodeURIComponent(fmatch[1].trim()); }
+                catch (_) { filename = fmatch[1].trim(); }
             }
+            if (!filename.toLowerCase().endsWith('.mp4')) filename += '.mp4';
 
             setStatus('✅ Video ready! Click "Save File" to download.', 'success');
             if (videoTitle) videoTitle.textContent = filename;
