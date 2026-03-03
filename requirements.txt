@@ -1,8 +1,8 @@
 fastapi==0.111.0
 uvicorn==0.30.1
-yt-dlp==2024.4.9
+yt-dlp
 slowapi==0.1.9
 pydantic==2.7.1
 python-multipart==0.0.9
 httpx==0.27.0
-certifi==2024.2.2
+certifi
